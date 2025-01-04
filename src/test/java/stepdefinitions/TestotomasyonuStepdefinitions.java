@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import pages.TestotomasyonuPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class TestotomasyonuStepdefinitions {
 
@@ -62,7 +63,92 @@ public class TestotomasyonuStepdefinitions {
 
     }
 
+    @When("arama kutusuna {string} yazip aratir")
+    public void arama_kutusuna_yazip_aratir(String aranacakKelime) {
+
+        testotomasyonuPage.aramaKutusu.sendKeys(aranacakKelime + Keys.ENTER);
+    }
+
+    @And("kodlari {int} saniye bekletir")
+    public void kodlariSaniyeBekletir(int saniye) {
+        ReusableMethods.bekle(saniye);
+    }
 
 
+    @Then("arama sonucunda urun bulunamadigini test eder")
+    public void aramaSonucundaUrunBulunamadiginiTestEder() {
 
+        String expectedAramaSonucu = ConfigReader.getProperty("toBulunamadiYazisi");
+        String actualAramaSonucu = testotomasyonuPage.aramaSonucElementi.getText();
+
+        Assertions.assertEquals(expectedAramaSonucu,actualAramaSonucu);
+    }
+
+    @When("account linkine basar")
+    public void account_linkine_basar() {
+       testotomasyonuPage.accountLinki.click();
+    }
+
+    @Then("email olarak {string} girer")
+    public void email_olarak_girer(String configDosyasiEmail) {
+
+        testotomasyonuPage.loginSayfasiEmailKutusu
+                            .sendKeys(ConfigReader.getProperty(configDosyasiEmail));
+
+    }
+
+    @Then("password olarak {string} girer")
+    public void password_olarak_girer(String configDosyasiPassword) {
+
+        testotomasyonuPage.loginSayfasiPasswordKutusu
+                            .sendKeys(ConfigReader.getProperty(configDosyasiPassword));
+    }
+
+    @Then("signIn butonuna basar")
+    public void sign_in_butonuna_basar() {
+        testotomasyonuPage.loginSayfasiSubmitButonu.click();
+    }
+
+    @Then("basarili olarak giris yapilabildigini test eder")
+    public void basarili_olarak_giris_yapilabildigini_test_eder() {
+        Assertions.assertTrue(testotomasyonuPage.logoutButonu.isDisplayed());
+    }
+
+    @Then("logout butonuna basarak cikis yapar")
+    public void logout_butonuna_basarak_cikis_yapar() {
+
+        testotomasyonuPage.logoutButonu.click();
+
+    }
+
+
+    @When("sisteme giris yapilamadigini test eder")
+    public void sistemeGirisYapilamadiginiTestEder() {
+        Assertions.assertTrue(testotomasyonuPage.loginSayfasiEmailKutusu.isDisplayed());
+    }
+
+
+    @And("acilan sayfadaki urun isminde case sensitive olmadan config dosyasindaki toAranacakKelime oldugunu test eder")
+    public void acilanSayfadakiUrunIsmindeCaseSensitiveOlmadanConfigDosyasindakiToAranacakKelimeOldugunuTestEder() {
+
+        String expectedIsimIcerik = ConfigReader.getProperty("toAranacakKelime");
+        String actualUrunIsmi = testotomasyonuPage.ilkUrunSayfasindakiIsimElementi
+                                                    .getText()
+                                                    .toLowerCase();
+
+        Assertions.assertTrue(actualUrunIsmi.contains(expectedIsimIcerik));
+
+    }
+
+    @When("arama kutusuna config dosyasindaki toAranacakKelime yazip aratir")
+    public void aramaKutusunaConfigDosyasindakiToAranacakKelimeYazipAratir() {
+
+        testotomasyonuPage.aramaKutusu.sendKeys(ConfigReader.getProperty("toAranacakKelime") + Keys.ENTER);
+    }
+
+    @Given("kullanici {string} anasayfaya gider")
+    public void kullaniciAnasayfayaGider(String configDosyasiUrl) {
+
+        Driver.getDriver().get(ConfigReader.getProperty(configDosyasiUrl));
+    }
 }
