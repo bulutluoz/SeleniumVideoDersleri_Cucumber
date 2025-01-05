@@ -9,7 +9,7 @@
       And password olarak "toGecersizPassword" girer
       Then signIn butonuna basar
       When sisteme giris yapilamadigini test eder
-      And sayfayi kapatir
+
 
 
     Scenario: TC12 kullanici gecersiz email ve gecerli password ile giris yapamamali
@@ -19,7 +19,7 @@
       And password olarak "toGecerliPassword" girer
       Then signIn butonuna basar
       When sisteme giris yapilamadigini test eder
-      And sayfayi kapatir
+
 
 
     Scenario: TC13 kullanici gecersiz email ve gecersiz password ile giris yapamamali
@@ -29,4 +29,4 @@
       And password olarak "toGecersizPassword" girer
       Then signIn butonuna basar
       When sisteme giris yapilamadigini test eder
-      And sayfayi kapatir
+

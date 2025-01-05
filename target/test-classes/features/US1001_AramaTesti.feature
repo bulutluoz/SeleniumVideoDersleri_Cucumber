@@ -6,7 +6,7 @@
       Given kullanici testotomasyonu anasayfaya gider
       When arama kutusuna phone yazip aratir
       Then arama sonucunda urun bulunabildigini test eder
-      And sayfayi kapatir
+
 
 
     @E2E_kullanici
@@ -14,11 +14,10 @@
       Given kullanici testotomasyonu anasayfaya gider
       When arama kutusuna dress yazip aratir
       Then arama sonucunda urun bulunabildigini test eder
-      And sayfayi kapatir
+
 
 
    Scenario: TC03  kullanici testotomasyonu sayfasinda travel kelimesi aratinca urun bulabilmeli
      Given kullanici testotomasyonu anasayfaya gider
      When arama kutusuna travel yazip aratir
      And arama sonucunda urun bulunabildigini test eder
-     Then sayfayi kapatir

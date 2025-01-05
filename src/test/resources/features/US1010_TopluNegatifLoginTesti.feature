@@ -10,7 +10,7 @@
       And kodlari 1 saniye bekletir
       And signIn butonuna basar
       Then sisteme giris yapilamadigini test eder
-      And sayfayi kapatir
+
 
       Examples:
         |verilenEmail    		|verilenPassword    |

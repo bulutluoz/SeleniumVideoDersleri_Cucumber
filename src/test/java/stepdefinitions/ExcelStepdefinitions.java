@@ -67,7 +67,9 @@ public class ExcelStepdefinitions {
 
         int calisilanSatirNo = Integer.parseInt(calisilanSatirNoStr);
 
-        sheet1.getRow(calisilanSatirNo-1).createCell(sutunNo-1).setCellValue(testOtomasyonundaBulunanSonucSayisi);
+        sheet1.getRow(calisilanSatirNo-1)
+                .createCell(sutunNo-1)
+                .setCellValue(testOtomasyonundaBulunanSonucSayisi);
 
         FileOutputStream fileOutputStream = new FileOutputStream(excelDosyaYolu);
         workbook.write(fileOutputStream);

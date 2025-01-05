@@ -1,7 +1,7 @@
 
 Feature: US1011 Kullanici excel olarak verilen urunlerle arama testi yapar
 
-  @wip
+
   Scenario Outline:TC18 Kullanici excel'deki urunleri istenen miktarda bulabilmeli
 
     Given kullanici "toUrl" anasayfaya gider

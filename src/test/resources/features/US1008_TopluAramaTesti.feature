@@ -7,7 +7,7 @@
       When arama kutusuna "<aranacakKelimeler>" yazip aratir
       Then arama sonucunda urun bulunabildigini test eder
       And kodlari 1 saniye bekletir
-      And sayfayi kapatir
+
 
       Examples:
       |aranacakKelimeler|
