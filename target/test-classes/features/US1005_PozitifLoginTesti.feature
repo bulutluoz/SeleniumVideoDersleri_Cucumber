@@ -1,7 +1,7 @@
 
   Feature: US1005 Kullanici gecerli bilgilerle sisteme giris yapar
 
-    @rapor
+    @rapor @paralel1
     Scenario: TC10 kullanici gecerli bilgilerle sisteme giris yapabilmeli
 
       Given kullanici testotomasyonu anasayfaya gider

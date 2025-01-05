@@ -9,14 +9,14 @@
 
 
 
-    @E2E_kullanici
+    @E2E_kullanici @paralel1
     Scenario: TC02  kullanici testotomasyonu sayfasinda dress bulabilmeli
       Given kullanici testotomasyonu anasayfaya gider
       When arama kutusuna dress yazip aratir
       Then arama sonucunda urun bulunabildigini test eder
 
 
-
+    @paralel2
    Scenario: TC03  kullanici testotomasyonu sayfasinda travel kelimesi aratinca urun bulabilmeli
      Given kullanici testotomasyonu anasayfaya gider
      When arama kutusuna travel yazip aratir

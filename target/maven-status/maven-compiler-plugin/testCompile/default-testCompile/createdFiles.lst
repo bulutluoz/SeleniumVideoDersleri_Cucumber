@@ -1,0 +1,15 @@
+runners/ParalelRun1.class
+pages/TestotomasyonuFormPage.class
+utilities/ReusableMethods.class
+runners/Runner.class
+pages/FacebookPage.class
+utilities/ConfigReader.class
+stepdefinitions/Hooks.class
+stepdefinitions/ExcelStepdefinitions.class
+pages/ZeroPage.class
+runners/ParalelRun2.class
+utilities/Driver.class
+pages/TestotomasyonuPage.class
+stepdefinitions/TestotomasyonuStepdefinitions.class
+stepdefinitions/SauceStepdefinitions.class
+pages/SaucePage.class

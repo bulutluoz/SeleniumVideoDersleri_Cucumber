@@ -10,13 +10,13 @@
 
 
 
-    @smoke
+    @smoke @paralel1
     Scenario: TC05  kullanici testotomasyonu sayfasinda dress bulabilmeli
       When arama kutusuna dress yazip aratir
       Then arama sonucunda urun bulunabildigini test eder
 
 
-
+    @paralel2
     Scenario: TC06  kullanici testotomasyonu sayfasinda travel kelimesi aratinca urun bulabilmeli
       When arama kutusuna travel yazip aratir
       And arama sonucunda urun bulunabildigini test eder

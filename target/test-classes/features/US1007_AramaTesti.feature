@@ -1,6 +1,6 @@
 
   Feature: US1007 kullanici arama yaptigi urunun bulundugunu test eder
-    
+    @paralel1
     Scenario: TC14 kullanici aradigi kelimeyi barindiran urun bulabildigini test eder
       
       Given kullanici "toUrl" anasayfaya gider

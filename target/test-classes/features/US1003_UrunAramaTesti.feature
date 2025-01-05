@@ -1,4 +1,5 @@
 
+  @paralel1
   Feature: US1003 kullanici aradigi kelime icin uygun sonuc bulur
 
 

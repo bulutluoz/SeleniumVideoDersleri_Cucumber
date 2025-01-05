@@ -45,7 +45,7 @@ public class SauceStepdefinitions {
     @Then("sectigi urunun basarili olarak sepete eklendigini test eder")
     public void sectigi_urunun_basarili_olarak_sepete_eklendigini_test_eder() {
 
-        String sepettekiUrunIsmi = saucePage.sepettekiUrunIsimElementi.getText()+"111";
+        String sepettekiUrunIsmi = saucePage.sepettekiUrunIsimElementi.getText();
 
         Assertions.assertEquals(ilkUrunIsmi,sepettekiUrunIsmi);
     }
